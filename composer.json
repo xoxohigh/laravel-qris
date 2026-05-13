@@ -1,6 +1,6 @@
 {
     "name": "fatwakb/laravel-qris",
-    "description": "Production ready QRIS dynamic generator for Laravel",
+    "description": "Production ready QRIS dynamic generator for Laravel 10/11/12 and native PHP",
     "type": "library",
     "license": "MIT",
     "autoload": {
