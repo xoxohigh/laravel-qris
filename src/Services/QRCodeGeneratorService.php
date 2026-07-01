@@ -9,14 +9,16 @@ class QRCodeGeneratorService
 {
     public static function png(string $payload): string
     {
-        $result = Builder::create()
-            ->writer(new PngWriter())
-            ->data($payload)
-            ->size(400)
-            ->margin(10)
-            ->build();
+        $result = new Builder(
+            writer: new PngWriter(),
+            data: $payload,
+            size: 400,
+            margin: 10,
+        );
 
-        return $result->getString();
+        return $result
+            ->build()
+            ->getString();
     }
 
     public static function base64(string $payload): string
