@@ -63,7 +63,7 @@ require 'vendor/autoload.php';
 ## Generate Dynamic QRIS From Raw String
 
 ```php
-use QRIS;
+use FatwaKB\LaravelQRIS\Facades\QRIS;
 
 $qris = QRIS::fromString(
     '00020101021126670016COM.NOBUBANK.WWW01189360050300000879140214508135781657150303UMI51440014ID.CO.QRIS.WWW0215ID20253777777770303UMI5204541153033605802ID5914TEST MERCHANT6013JAKARTA BARAT6105111116304D41D'
@@ -87,7 +87,7 @@ return view('welcome', compact('qris'));
 ## Generate From Uploaded QR Image
 
 ```php
-use QRIS;
+use FatwaKB\LaravelQRIS\Facades\QRIS;
 
 public function generate(Request $request)
 {
@@ -108,7 +108,7 @@ public function generate(Request $request)
 ## Save QRIS PNG File
 
 ```php
-use QRIS;
+
 
 QRIS::fromString($rawQris)
     ->amount(50000)
